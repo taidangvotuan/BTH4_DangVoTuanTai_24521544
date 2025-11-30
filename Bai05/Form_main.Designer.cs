@@ -35,13 +35,13 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolStripButtonThemMoi = new System.Windows.Forms.ToolStripButton();
             this.DataGridViewSinhVien = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TextBoxTimKiem = new System.Windows.Forms.TextBox();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TextBoxTimKiem = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSinhVien)).BeginInit();
@@ -55,7 +55,7 @@
             this.ToolStripMenuItemChucNang});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(924, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(924, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,7 +65,7 @@
             this.ToolStripMenuItemThemMoi,
             this.ToolStripMenuItemThoat});
             this.ToolStripMenuItemChucNang.Name = "ToolStripMenuItemChucNang";
-            this.ToolStripMenuItemChucNang.Size = new System.Drawing.Size(96, 24);
+            this.ToolStripMenuItemChucNang.Size = new System.Drawing.Size(96, 26);
             this.ToolStripMenuItemChucNang.Text = "Chức Năng";
             this.ToolStripMenuItemChucNang.Click += new System.EventHandler(this.ToolStripMenuItemChucNang_Click);
             // 
@@ -89,7 +89,7 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripButtonThemMoi});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(924, 35);
             this.toolStrip1.TabIndex = 1;
@@ -108,6 +108,8 @@
             // 
             // DataGridViewSinhVien
             // 
+            this.DataGridViewSinhVien.AllowUserToAddRows = false;
+            this.DataGridViewSinhVien.AllowUserToDeleteRows = false;
             this.DataGridViewSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -119,9 +121,59 @@
             this.DataGridViewSinhVien.Name = "DataGridViewSinhVien";
             this.DataGridViewSinhVien.RowHeadersWidth = 51;
             this.DataGridViewSinhVien.RowTemplate.Height = 24;
+            this.DataGridViewSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewSinhVien.Size = new System.Drawing.Size(922, 580);
             this.DataGridViewSinhVien.TabIndex = 2;
             this.DataGridViewSinhVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // STT
+            // 
+            this.STT.FillWeight = 74F;
+            this.STT.HeaderText = "Số TT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 74;
+            // 
+            // MSSV
+            // 
+            this.MSSV.DataPropertyName = "MSSV";
+            this.MSSV.FillWeight = 98F;
+            this.MSSV.HeaderText = "Mã Số SV";
+            this.MSSV.MinimumWidth = 6;
+            this.MSSV.Name = "MSSV";
+            this.MSSV.ReadOnly = true;
+            this.MSSV.Width = 98;
+            // 
+            // HoTenSV
+            // 
+            this.HoTenSV.DataPropertyName = "HoTenSV";
+            this.HoTenSV.FillWeight = 200F;
+            this.HoTenSV.HeaderText = "Tên Sinh Viên";
+            this.HoTenSV.MinimumWidth = 6;
+            this.HoTenSV.Name = "HoTenSV";
+            this.HoTenSV.ReadOnly = true;
+            this.HoTenSV.Width = 200;
+            // 
+            // Khoa
+            // 
+            this.Khoa.DataPropertyName = "Khoa";
+            this.Khoa.FillWeight = 180F;
+            this.Khoa.HeaderText = "Khoa";
+            this.Khoa.MinimumWidth = 6;
+            this.Khoa.Name = "Khoa";
+            this.Khoa.ReadOnly = true;
+            this.Khoa.Width = 180;
+            // 
+            // DiemTB
+            // 
+            this.DiemTB.DataPropertyName = "DiemTB";
+            this.DiemTB.FillWeight = 88F;
+            this.DiemTB.HeaderText = "Điểm TB";
+            this.DiemTB.MinimumWidth = 6;
+            this.DiemTB.Name = "DiemTB";
+            this.DiemTB.ReadOnly = true;
+            this.DiemTB.Width = 88;
             // 
             // label1
             // 
@@ -142,50 +194,6 @@
             this.TextBoxTimKiem.Size = new System.Drawing.Size(279, 20);
             this.TextBoxTimKiem.TabIndex = 4;
             this.TextBoxTimKiem.TextChanged += new System.EventHandler(this.TextBoxTimKiem_TextChanged);
-            // 
-            // STT
-            // 
-            this.STT.FillWeight = 74F;
-            this.STT.HeaderText = "Số TT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.Width = 74;
-            // 
-            // MSSV
-            // 
-            this.MSSV.DataPropertyName = "MSSV";
-            this.MSSV.FillWeight = 98F;
-            this.MSSV.HeaderText = "Mã Số SV";
-            this.MSSV.MinimumWidth = 6;
-            this.MSSV.Name = "MSSV";
-            this.MSSV.Width = 98;
-            // 
-            // HoTenSV
-            // 
-            this.HoTenSV.DataPropertyName = "HoTenSV";
-            this.HoTenSV.FillWeight = 200F;
-            this.HoTenSV.HeaderText = "Tên Sinh Viên";
-            this.HoTenSV.MinimumWidth = 6;
-            this.HoTenSV.Name = "HoTenSV";
-            this.HoTenSV.Width = 200;
-            // 
-            // Khoa
-            // 
-            this.Khoa.DataPropertyName = "Khoa";
-            this.Khoa.FillWeight = 180F;
-            this.Khoa.HeaderText = "Khoa";
-            this.Khoa.MinimumWidth = 6;
-            this.Khoa.Name = "Khoa";
-            this.Khoa.Width = 180;
-            // 
-            // DiemTB
-            // 
-            this.DiemTB.DataPropertyName = "DiemTB";
-            this.DiemTB.FillWeight = 88F;
-            this.DiemTB.HeaderText = "Điểm TB";
-            this.DiemTB.MinimumWidth = 6;
-            this.DiemTB.Name = "DiemTB";
-            this.DiemTB.Width = 88;
             // 
             // Form_main
             // 

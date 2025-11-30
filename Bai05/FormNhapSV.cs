@@ -46,6 +46,12 @@ namespace Bai05
                 return;
             }
 
+            if (diem < 0 || diem > 10)
+            {
+                MessageBox.Show("Điểm trung bình phải nằm trong khoảng từ 0 đến 10!");
+                return;
+            }
+
             // Tạo sinh viên mới
             SinhVienMoi = new SinhVien
             {
